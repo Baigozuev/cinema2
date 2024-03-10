@@ -1,0 +1,21 @@
+#acters {
+  padding: 30px 0;
+  .acters {
+    margin-top: 40px;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    overflow-x: scroll;
+    &--content {
+      //   width: 60%;
+      //   border: 2px solid white;
+      box-shadow: 0 0 10px 10px rgba(165, 163, 163, 0.671);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      gap: 10px;
+    }
+  }
+}

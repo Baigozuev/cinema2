@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router";
+import "./App.scss";
+import Header from "./component/Header";
+import Hero from "./component/Hero";
+import Popular from "./component/Popular";
+import TopRetad from "./component/TopRetad";
+import MovieDetails from "./pages/MovieDeatils";
+import ActorDetails from "./pages/ActorDetails";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/popular" element={<Popular />} />
+        <Route path="/topRetad" element={<TopRetad />} />
+        <Route path="/movieDetails/:movieId" element={<MovieDetails />} />
+        <Route path="/actorDetails/:actorId" element={<ActorDetails/>}/>
+      </Routes>
     </div>
   );
 }
